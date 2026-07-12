@@ -179,10 +179,9 @@ html.js .rcard.in .micon{opacity:1;transform:none;transition:opacity .3s ease 1.
 .now .blab{color:var(--crimson)}
 .before,.now{display:flex;gap:8px;align-items:flex-start;font-size:14.5px;margin-bottom:8px}
 .before{color:var(--muted)}
-.strike{position:relative}
-.strike::after{content:"";position:absolute;left:-1px;right:-1px;top:52%;height:2px;background:var(--crimson);border-radius:2px;transform:scaleX(1);transform-origin:left}
-html.js .rcard .strike::after{transform:scaleX(0);transition:transform .4s ease .15s}
-html.js .rcard.in .strike::after{transform:scaleX(1)}
+.strike{text-decoration:line-through;text-decoration-color:var(--crimson);-webkit-text-decoration-color:var(--crimson);text-decoration-thickness:2px}
+html.js .rcard .strike{text-decoration-color:transparent;-webkit-text-decoration-color:transparent;transition:text-decoration-color .45s ease .3s,-webkit-text-decoration-color .45s ease .3s}
+html.js .rcard.in .strike{text-decoration-color:var(--crimson);-webkit-text-decoration-color:var(--crimson)}
 .now{color:var(--ink);font-weight:500}
 .nowline{background-image:linear-gradient(var(--gold),var(--gold));background-repeat:no-repeat;background-position:0 100%;background-size:100% 2px;padding-bottom:2px}
 html.js .rcard .now{opacity:0;transform:translateY(10px)}
@@ -448,25 +447,39 @@ html.js .rcard.in .nowline{background-size:100% 2px;transition:background-size .
   html.js .vg *,html.js .frame *,html.js .fdraw rect{animation:none !important}
   html.js .reveal,html.js .rule,html.js .rcard{opacity:1;transform:none;transition:none}
   html.js .rcard .now,html.js .rcard .micon{opacity:1;transform:none;transition:none}
-  html.js .rcard .strike::after{transform:scaleX(1);transition:none}
+  html.js .rcard .strike{text-decoration-color:var(--crimson);-webkit-text-decoration-color:var(--crimson);transition:none}
   html.js .rcard .nowline{background-size:100% 2px;transition:none}
+  html.js .getin .gstep,html.js .getin .gline{opacity:1;transform:none;transition:none}
+  html.js .getin .gline::after{opacity:1;transition:none}
   .btn,.rcard{transition:none}
 }
 
 /* ============ DRAWER ============ */
 #drawer{background:var(--off);padding:60px 0}
-.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:12px}
-.drow{display:flex;gap:10px;align-items:flex-start;background:var(--surface);border:1px solid rgba(21,22,26,.08);border-radius:12px;padding:12px 15px;font-size:13.5px;color:#3c3a34}
-.drow svg{flex:none;color:var(--primary);margin-top:2px}
-.drow strong{color:var(--ink)}
+.dtiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,190px),1fr));gap:14px}
+.dtile{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;background:var(--surface);border:1px solid rgba(21,22,26,.08);border-radius:14px;padding:24px 16px;box-shadow:0 4px 16px rgba(21,22,26,.04)}
+.dtile .di{width:46px;height:46px;flex:none;border-radius:13px;background:rgba(23,74,82,.08);color:var(--primary);display:inline-flex;align-items:center;justify-content:center}
+.dtile span{font-weight:600;font-size:14.5px;color:var(--ink);line-height:1.25}
+html.js .dtile{transform:translateY(14px) scale(.9);transition:opacity .5s var(--ease),transform .55s cubic-bezier(.34,1.56,.64,1);transition-delay:var(--d,0ms)}
+html.js .dtile.in{transform:none}
 
 /* ============ GET IN ============ */
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:18px;margin-bottom:26px}
-.step{background:var(--surface);border:1px solid rgba(21,22,26,.08);border-radius:16px;padding:22px}
-.step .n{font-family:'Fraunces',Georgia,serif;font-size:38px;font-weight:600;color:var(--crimson);line-height:1;margin-bottom:10px}
-.step p{font-size:14.5px;color:#3c3a34}
-.step a{color:var(--crimson);font-weight:600}
-.amber{display:flex;gap:11px;align-items:flex-start;background:rgba(248,176,24,.14);border:1px solid rgba(248,176,24,.5);border-radius:14px;padding:14px 17px;font-size:14px;color:#4a3c10;max-width:640px}
+.getin{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:22px}
+@media (max-width:640px){.getin{grid-template-columns:1fr}}
+.gstep{position:relative;z-index:1;background:var(--surface);border:1px solid rgba(21,22,26,.08);border-radius:16px;padding:26px 20px 22px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:13px}
+.gstep .gi{width:54px;height:54px;flex:none;border-radius:15px;background:rgba(158,27,34,.07);color:var(--crimson);display:inline-flex;align-items:center;justify-content:center}
+.gstep .gn{position:absolute;top:11px;right:15px;font-family:'Fraunces',Georgia,serif;font-size:30px;font-weight:600;color:rgba(158,27,34,.2);line-height:1}
+.gstep p{font-size:15.5px;font-weight:600;color:var(--ink)}
+.gline{position:absolute;left:17%;right:17%;top:53px;height:2px;z-index:0;background:var(--gold);border-radius:2px;transform:scaleX(0);transform-origin:left}
+.gline::after{content:"";position:absolute;right:-2px;top:-3px;border-left:8px solid var(--gold);border-top:4px solid transparent;border-bottom:4px solid transparent;opacity:0}
+@media (max-width:640px){.gline{display:none}}
+html.js .getin{opacity:1;transform:none}
+html.js .gstep{opacity:0;transform:translateY(14px) scale(.94);transition:opacity .5s var(--ease),transform .55s cubic-bezier(.34,1.56,.64,1);transition-delay:var(--d,0ms)}
+html.js .getin.in .gstep{opacity:1;transform:none}
+html.js .getin.in .gline{transform:scaleX(1);transition:transform .9s var(--ease) .35s}
+html.js .getin.in .gline::after{opacity:1;transition:opacity .2s ease 1.25s}
+.getin-cta{margin:0 0 22px}
+.amber{display:flex;gap:11px;align-items:center;background:rgba(248,176,24,.14);border:1px solid rgba(248,176,24,.5);border-radius:14px;padding:14px 17px;font-size:14px;color:#4a3c10;max-width:640px}
 .amber svg{flex:none;color:#8a6a0a;margin-top:2px}
 .roles{margin-top:18px;font-size:14px;color:var(--muted)}
 .roles strong{color:var(--ink)}
@@ -738,7 +751,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="wrap">
     <div class="nottech-in reveal">
       <span class="qm" aria-hidden="true">&#8220;</span>
-      <p><span class="obj">I am not a technical person.</span> <strong>Perfect.</strong> The portal was made for you. If you can send a WhatsApp message, you can run everything on this page.</p>
+      <p><span class="obj">I am not a technical person.</span> <strong>Perfect.</strong> The portal was built for you. If you can send a WhatsApp, you can run this.</p>
     </div>
   </div>
 </section>
@@ -1040,13 +1053,13 @@ document.addEventListener('DOMContentLoaded', function(){
       <p class="kicker reveal">Also inside.</p>
       <h2 class="reveal" style="--d:80ms">More in the drawer</h2>
     </div>
-    <div class="dgrid">
-      <div class="drow reveal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><strong>Sessions and Scheduling:</strong> build the agenda, open check-in per talk.</span></div>
-      <div class="drow reveal" style="--d:80ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9l-6-6z"/><path d="M14 3v6h6"/></svg><span><strong>Speaker Documents:</strong> collect bios, photos, and slides in one place.</span></div>
-      <div class="drow reveal" style="--d:160ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><path d="M12 5.5v5M9.8 8h4.4M5 21c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg><span><strong>Scholarships and Refunds:</strong> approve or decline requests with a note.</span></div>
-      <div class="drow reveal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M16.5 14.2c2.2.3 3.7 1.8 4.2 4.3"/></svg><span><strong>Volunteers and Shifts:</strong> sign people up and assign the roster.</span></div>
-      <div class="drow reveal" style="--d:80ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5v14z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/></svg><span><strong>Contacts Book:</strong> sponsors, speakers, and partners with interaction history.</span></div>
-      <div class="drow reveal" style="--d:160ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3.5 6l1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></svg><span><strong>Audit Trail:</strong> every important action logged, who and when.</span></div>
+    <div class="dtiles">
+      <div class="dtile reveal"><span class="di"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><span>Sessions and scheduling</span></div>
+      <div class="dtile reveal" style="--d:70ms"><span class="di"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 00-2 2v14a2 2 0 002 2h12a2 2 0 002-2V9l-6-6z"/><path d="M14 3v6h6"/></svg></span><span>Speaker documents</span></div>
+      <div class="dtile reveal" style="--d:140ms"><span class="di"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><path d="M12 5.5v5M9.8 8h4.4M5 21c.8-3.4 3.6-5 7-5s6.2 1.6 7 5"/></svg></span><span>Scholarships and refunds</span></div>
+      <div class="dtile reveal" style="--d:210ms"><span class="di"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19c.6-3.2 2.8-5 5.5-5s4.9 1.8 5.5 5"/><circle cx="17" cy="9" r="2.6"/><path d="M16.5 14.2c2.2.3 3.7 1.8 4.2 4.3"/></svg></span><span>Volunteers and shifts</span></div>
+      <div class="dtile reveal" style="--d:280ms"><span class="di"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 016.5 17H20V3H6.5A2.5 2.5 0 004 5.5v14z"/><path d="M4 19.5A2.5 2.5 0 006.5 22H20v-5"/></svg></span><span>Contacts book</span></div>
+      <div class="dtile reveal" style="--d:350ms"><span class="di"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3.5 6l1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></svg></span><span>Audit trail</span></div>
     </div>
   </div>
 </section>
@@ -1059,16 +1072,20 @@ document.addEventListener('DOMContentLoaded', function(){
       <p class="kicker reveal">Three steps.</p>
       <h2 class="reveal" style="--d:80ms">How you get in</h2>
     </div>
-    <div class="steps">
-      <div class="step reveal"><div class="n">1</div><p>Ask Alen for an account. Email <a href="mailto:president@medx.hr">president@medx.hr</a> or drop a note in the team channel.</p></div>
-      <div class="step reveal" style="--d:80ms"><div class="n">2</div><p>Watch your inbox. Your login and password arrive by email.</p></div>
-      <div class="step reveal" style="--d:160ms"><div class="n">3</div><p>Open <a href="https://medx-admin-portal.onrender.com" target="_blank" rel="noopener">medx-admin-portal.onrender.com</a> and sign in. You are in.</p></div>
+    <div class="getin reveal">
+      <span class="gline" aria-hidden="true"></span>
+      <div class="gstep"><span class="gn">1</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><p>Email Alen for access</p></div>
+      <div class="gstep" style="--d:120ms"><span class="gn">2</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M14 9l2 2"/></svg></span><p>Your login arrives by email</p></div>
+      <div class="gstep" style="--d:240ms"><span class="gn">3</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h5v18h-5"/><path d="M14 3v18M3 21h11M9 12h.01M3 6l9 1.5v9L3 18V6z"/></svg></span><p>Open the portal and sign in</p></div>
+    </div>
+    <div class="getin-cta reveal">
+      <a class="btn btn-gold" href="mailto:president@medx.hr?subject=Portal%20access">Email Alen for access</a>
     </div>
     <div class="amber reveal">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-      <span>If the portal has been quiet for a while, the first load can take about 30 seconds. That is normal. Give it a moment and it wakes right up.</span>
+      <span>First load after a quiet spell takes about 30 seconds.</span>
     </div>
-    <p class="roles reveal">Two roles: most of the team gets <strong>full admin</strong>, and event-day helpers get a <strong>scanner login</strong> for check-in. There is no self sign-up.</p>
+    <p class="roles reveal">Most get <strong>full admin</strong>. Event-day helpers get a <strong>scanner login</strong>.</p>
   </div>
 </section>
 
