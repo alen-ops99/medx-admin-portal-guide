@@ -318,29 +318,34 @@ html.js .rcard.in .nowline{background-size:100% 2px;transition:background-size .
 @keyframes v4rip{0%,40%{transform:scale(0);opacity:.6}50%,100%{transform:scale(1.6);opacity:0}}
 @keyframes v4flash{0%,46%{background-color:transparent}50%{background-color:rgba(34,197,94,.08)}56%,100%{background-color:transparent}}
 
-/* ---- V5 PR calendar ---- */
-.v5-tray{position:absolute;left:0;top:0;font-size:8px;color:#64748b;opacity:1}
-.v5-grid{position:absolute;left:0;right:0;top:42px;display:grid;grid-template-columns:repeat(7,1fr);gap:3px;opacity:1}
-.v5-wd{font-size:7px;color:#64748b;text-align:center;line-height:12px;height:12px}
-.v5-cell{height:24px;background:#131a2c;border:1px solid #1f2940;border-radius:3px}
-.v5-chip{position:absolute;display:inline-flex;align-items:center;gap:4px;font-size:8px;font-weight:600;border-radius:6px;padding:2px 6px;white-space:nowrap}
-.v5-chip svg{flex:none}
-.v5-c1{left:34px;top:14px;background:rgba(236,72,153,.15);color:#ec4899;transform:translate(56px,54px)}
-.v5-c2{left:110px;top:14px;background:rgba(56,189,248,.15);color:#38bdf8;transform:translate(140px,81px)}
-.v5-c3{left:196px;top:14px;background:rgba(16,185,129,.15);color:#10b981;transform:translate(-148px,135px)}
-.v5-pill{position:absolute;left:50%;bottom:0;transform:translateX(-50%);background:rgba(236,72,153,.14);color:#ec4899;font-size:9px;font-weight:600;border-radius:999px;padding:2px 10px;white-space:nowrap;opacity:1}
-.v5-t1{box-shadow:0 0 0 1px rgba(236,72,153,.3)}
-.v5-t2{box-shadow:0 0 0 1px rgba(56,189,248,.3)}
-.v5-t3{box-shadow:0 0 0 1px rgba(16,185,129,.3)}
-@keyframes v5grid{0%{opacity:0}8%,100%{opacity:1}}
-@keyframes v5tray{0%,8%{opacity:0}10%,100%{opacity:1}}
-@keyframes v5c1{0%,8%{opacity:0;transform:translate(0,0)}10%{opacity:1;transform:translate(0,0) rotate(3deg)}17%{transform:translate(28px,21px) rotate(1deg)}22%{transform:translate(56px,54px) scale(1,.9) rotate(0)}24%,94%{opacity:1;transform:translate(56px,54px)}100%{opacity:0;transform:translate(56px,54px)}}
-@keyframes v5c2{0%,26%{opacity:0;transform:translate(0,0)}28%{opacity:1;transform:translate(0,0) rotate(3deg)}33%{transform:translate(70px,34px) rotate(1deg)}38%{transform:translate(140px,81px) scale(1,.9) rotate(0)}40%,94%{opacity:1;transform:translate(140px,81px)}100%{opacity:0;transform:translate(140px,81px)}}
-@keyframes v5c3{0%,42%{opacity:0;transform:translate(0,0)}44%{opacity:1;transform:translate(0,0) rotate(-3deg)}49%{transform:translate(-74px,61px) rotate(-1deg)}54%{transform:translate(-148px,135px) scale(1,.9) rotate(0)}56%,94%{opacity:1;transform:translate(-148px,135px)}100%{opacity:0;transform:translate(-148px,135px)}}
-@keyframes v5g1{0%,22%{box-shadow:0 0 0 0 rgba(236,72,153,0)}25%{box-shadow:0 0 0 2px rgba(236,72,153,.8)}28%,92%{box-shadow:0 0 0 1px rgba(236,72,153,.3)}100%{box-shadow:0 0 0 0 rgba(236,72,153,0)}}
-@keyframes v5g2{0%,38%{box-shadow:0 0 0 0 rgba(56,189,248,0)}41%{box-shadow:0 0 0 2px rgba(56,189,248,.8)}44%,92%{box-shadow:0 0 0 1px rgba(56,189,248,.3)}100%{box-shadow:0 0 0 0 rgba(56,189,248,0)}}
-@keyframes v5g3{0%,54%{box-shadow:0 0 0 0 rgba(16,185,129,0)}57%{box-shadow:0 0 0 2px rgba(16,185,129,.8)}60%,92%{box-shadow:0 0 0 1px rgba(16,185,129,.3)}100%{box-shadow:0 0 0 0 rgba(16,185,129,0)}}
-@keyframes v5pill{0%,58%{opacity:0;transform:translateX(-50%) scale(.85)}64%,92%{opacity:1;transform:translateX(-50%) scale(1)}100%{opacity:0;transform:translateX(-50%) scale(.85)}}
+/* ---- V7 Content Studio one-click caption ---- */
+.v7-compose{position:absolute;left:0;top:0;width:100%;background:#1c2436;border-radius:10px;padding:9px 10px}
+.v7-lab{font-size:8px;color:#64748b;margin-bottom:3px}
+.v7-topic{position:relative;font-size:9px;color:#e9eef9;background:#131a2c;border:1px solid #26324a;border-radius:5px;padding:4px 7px;margin-bottom:7px;white-space:nowrap;overflow:hidden}
+.v7-btnrow{display:flex;justify-content:flex-end}
+.v7-gen{display:inline-flex;align-items:center;gap:5px;background:#c9a962;color:#15161A;font-size:9px;font-weight:700;border-radius:6px;padding:3px 10px}
+.v7-gen svg{display:block}
+.v7-chip{position:absolute;top:76px;width:96px;display:flex;align-items:center;gap:6px;background:#131a2c;border:1px solid #26324a;border-radius:8px;padding:5px 7px;opacity:1}
+.v7-ig{left:0}.v7-li{left:118px}.v7-fb{left:236px}
+.v7-ico{width:20px;height:20px;flex:none;border-radius:6px;font-size:8px;font-weight:800;color:#fff;display:flex;align-items:center;justify-content:center}
+.v7-ig .v7-ico{background:linear-gradient(135deg,#f9ce34,#ee2a7b 55%,#6228d7)}
+.v7-li .v7-ico{background:#0a66c2}
+.v7-fb .v7-ico{background:#1877f2}
+.v7-lines{flex:1;display:flex;flex-direction:column;gap:3px}
+.v7-lines i{height:3px;border-radius:2px;background:#334155;transform:scaleX(1);transform-origin:left}
+.v7-lines i:nth-child(1){width:100%}
+.v7-lines i:nth-child(2){width:66%}
+.v7-copied{position:absolute;left:50%;bottom:0;transform:translateX(-50%);display:inline-flex;align-items:center;gap:5px;background:rgba(34,197,94,.15);border:1px solid rgba(34,197,94,.4);color:#22c55e;font-size:10px;font-weight:600;border-radius:999px;padding:3px 11px;white-space:nowrap;opacity:1}
+@keyframes v7card{0%{opacity:0;transform:translateY(8px)}8%,100%{opacity:1;transform:none}}
+@keyframes v7topic{0%,10%{clip-path:inset(0 100% 0 0)}20%,100%{clip-path:inset(0 0 0 0)}}
+@keyframes v7gen{0%,22%{transform:scale(1);filter:brightness(1)}24%{transform:scale(.93);filter:brightness(1.18)}26%,100%{transform:scale(1);filter:brightness(1)}}
+@keyframes v7ig{0%,26%{opacity:0;transform:translateY(11px)}32%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(11px)}}
+@keyframes v7li{0%,34%{opacity:0;transform:translateY(11px)}40%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(11px)}}
+@keyframes v7fb{0%,42%{opacity:0;transform:translateY(11px)}48%,94%{opacity:1;transform:none}100%{opacity:0;transform:translateY(11px)}}
+@keyframes v7l1{0%,32%{transform:scaleX(0)}38%,94%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes v7l2{0%,40%{transform:scaleX(0)}46%,94%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes v7l3{0%,48%{transform:scaleX(0)}54%,94%{transform:scaleX(1)}100%{transform:scaleX(0)}}
+@keyframes v7copied{0%,56%{opacity:0;transform:translateX(-50%) scale(.85)}62%,92%{opacity:1;transform:translateX(-50%) scale(1)}100%{opacity:0;transform:translateX(-50%) scale(.85)}}
 
 /* ---- V6 System health ---- */
 .v6-run{margin-left:auto;display:inline-flex;align-items:center;gap:5px;border:1px solid #334155;color:#e9eef9;font-size:9px;border-radius:6px;padding:3px 9px;white-space:nowrap}
@@ -417,15 +422,16 @@ html.js .rcard.in .nowline{background-size:100% 2px;transition:background-size .
   html.js .v4-stamp{animation:v4stamp 5s linear infinite paused}
   html.js .v4-rip{animation:v4rip 5s linear infinite paused}
   html.js .v4-tot{animation:v4flash 5s linear infinite paused}
-  html.js .v5-grid{animation:v5grid 6.5s linear infinite paused}
-  html.js .v5-tray{animation:v5tray 6.5s linear infinite paused}
-  html.js .v5-c1{animation:v5c1 6.5s linear infinite paused}
-  html.js .v5-c2{animation:v5c2 6.5s linear infinite paused}
-  html.js .v5-c3{animation:v5c3 6.5s linear infinite paused}
-  html.js .v5-t1{animation:v5g1 6.5s linear infinite paused}
-  html.js .v5-t2{animation:v5g2 6.5s linear infinite paused}
-  html.js .v5-t3{animation:v5g3 6.5s linear infinite paused}
-  html.js .v5-pill{animation:v5pill 6.5s linear infinite paused}
+  html.js .v7-compose{animation:v7card 6s linear infinite paused}
+  html.js .v7-topic{animation:v7topic 6s linear infinite paused}
+  html.js .v7-gen{animation:v7gen 6s linear infinite paused}
+  html.js .v7-ig{animation:v7ig 6s linear infinite paused}
+  html.js .v7-li{animation:v7li 6s linear infinite paused}
+  html.js .v7-fb{animation:v7fb 6s linear infinite paused}
+  html.js .v7-ig .v7-lines i{animation:v7l1 6s linear infinite paused}
+  html.js .v7-li .v7-lines i{animation:v7l2 6s linear infinite paused}
+  html.js .v7-fb .v7-lines i{animation:v7l3 6s linear infinite paused}
+  html.js .v7-copied{animation:v7copied 6s linear infinite paused}
   html.js .v6-r1{animation:v6r1 5s linear infinite paused}
   html.js .v6-r2{animation:v6r2 5s linear infinite paused}
   html.js .v6-r3{animation:v6r3 5s linear infinite paused}
@@ -787,7 +793,80 @@ document.addEventListener('DOMContentLoaded', function(){
     </div>
     <div class="rgrid">
 
-      <!-- Card 1: Email blast -->
+      <!-- Card 1: Content Studio (one-click social) -->
+      <article class="rcard">
+        <div class="vg" role="img" aria-labelledby="capcs">
+          <p class="sr" id="capcs">Inside the Content Studio a topic is typed and one button press writes the caption. Three platform chips for Instagram, LinkedIn and Facebook rise up and fill with text, then a Copied note appears so the post is ready to paste.</p>
+          <div class="vgbar" aria-hidden="true"><span class="vgdots"><i></i><i></i><i></i></span><span class="vglab"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>Content Studio &#183; One-click caption</span></div>
+          <div class="vgbody" aria-hidden="true">
+            <div class="v7-compose">
+              <div class="v7-lab">Topic</div>
+              <div class="v7-topic">Plexus 2026 tickets are live</div>
+              <div class="v7-btnrow"><span class="v7-gen"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#15161A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.4 6.6L22 12l-6.6 2.4L13 21l-2.4-6.6L4 12l6.6-2.4L13 3z"/></svg>Generate</span></div>
+            </div>
+            <span class="v7-chip v7-ig"><span class="v7-ico">IG</span><span class="v7-lines"><i></i><i></i></span></span>
+            <span class="v7-chip v7-li"><span class="v7-ico">in</span><span class="v7-lines"><i></i><i></i></span></span>
+            <span class="v7-chip v7-fb"><span class="v7-ico">f</span><span class="v7-lines"><i></i><i></i></span></span>
+            <span class="v7-copied"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg>Copied, paste to post</span>
+          </div>
+        </div>
+        <div class="rmeta">
+          <span class="micon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg></span>
+          <span class="rtag">Replaces Canva and scattered drafts</span>
+        </div>
+        <h3>Write a social post in one click</h3>
+        <p class="before"><span class="blab">Before</span> <span class="strike">Draft in Notes, design in Canva, copy it between five apps.</span></p>
+        <p class="now"><span class="blab">Now</span> <span class="nowline">Type a topic, generate the caption, and plan every post on one calendar.</span></p>
+        <p class="fineprint">One click writes the post. You paste it to Instagram or LinkedIn yourself.</p>
+      </article>
+
+      <!-- Card 2: Newsletter auto-generate -->
+      <article class="rcard" style="--d:80ms">
+        <div class="vstatic" role="img" aria-labelledby="capnl">
+          <p class="sr" id="capnl">Auto-Generate pulls sessions, deadlines and speakers into a finished newsletter draft, which is then posted to members inside the portal rather than emailed.</p>
+          <div class="vgbar" aria-hidden="true"><span class="vgdots"><i></i><i></i><i></i></span><span class="vglab"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Newsletter &#183; Auto-Generate</span></div>
+          <svg class="art" viewBox="0 0 312 158" aria-hidden="true">
+            <g>
+              <rect x="0" y="8" width="120" height="28" rx="8" fill="#1c2436"/>
+              <circle cx="18" cy="22" r="5" fill="rgba(56,189,248,.75)"/>
+              <text x="32" y="26" font-family="Inter" font-size="9" font-weight="600" fill="#94a3b8">Sessions</text>
+            </g>
+            <g>
+              <rect x="0" y="44" width="120" height="28" rx="8" fill="#1c2436"/>
+              <circle cx="18" cy="58" r="5" fill="rgba(248,176,24,.85)"/>
+              <text x="32" y="62" font-family="Inter" font-size="9" font-weight="600" fill="#94a3b8">Deadlines</text>
+            </g>
+            <g>
+              <rect x="0" y="80" width="120" height="28" rx="8" fill="#1c2436"/>
+              <circle cx="18" cy="94" r="5" fill="rgba(167,139,250,.85)"/>
+              <text x="32" y="98" font-family="Inter" font-size="9" font-weight="600" fill="#94a3b8">Speakers</text>
+            </g>
+            <path d="M120 22c24 0 22 36 44 36" fill="none" stroke="#334155" stroke-width="1.5"/>
+            <path d="M120 58h44" fill="none" stroke="#334155" stroke-width="1.5"/>
+            <path d="M120 94c24 0 22 -36 44 -36" fill="none" stroke="#334155" stroke-width="1.5"/>
+            <path d="M164 50l2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6z" fill="#c9a962"/>
+            <rect x="176" y="6" width="136" height="120" rx="9" fill="#1c2436"/>
+            <rect x="190" y="20" width="74" height="7" rx="3.5" fill="#c9a962"/>
+            <rect x="190" y="36" width="108" height="4" rx="2" fill="#334155"/>
+            <rect x="190" y="46" width="96" height="4" rx="2" fill="#334155"/>
+            <rect x="190" y="56" width="104" height="4" rx="2" fill="#334155"/>
+            <rect x="190" y="66" width="80" height="4" rx="2" fill="#334155"/>
+            <rect x="190" y="92" width="108" height="20" rx="10" fill="rgba(34,197,94,.15)"/>
+            <text x="244" y="105" text-anchor="middle" font-family="Inter" font-size="9" font-weight="600" fill="#22c55e">Posted in portal</text>
+            <text x="156" y="150" text-anchor="middle" font-family="Inter" font-size="8.5" fill="#64748b">Auto-built, then posted to members in the portal</text>
+          </svg>
+        </div>
+        <div class="rmeta">
+          <span class="micon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span class="rtag">Replaces writing it from scratch</span>
+        </div>
+        <h3>Build the newsletter in one click</h3>
+        <p class="before"><span class="blab">Before</span> <span class="strike">Start at a blank page and hunt down every date and speaker.</span></p>
+        <p class="now"><span class="blab">Now</span> <span class="nowline">Auto-Generate gathers your sessions, deadlines and speakers into a ready draft.</span></p>
+        <p class="fineprint">It posts to members inside the portal and pings their phones. It does not send an email.</p>
+      </article>
+
+      <!-- Card 3: Email blast -->
       <article class="rcard">
         <div class="vg" role="img" aria-labelledby="cap1">
           <p class="sr" id="cap1">One announcement is written in the portal and sent to every registrant at once. Four envelopes reach four members and a green tag confirms it was sent to 214 people.</p>
@@ -818,9 +897,9 @@ document.addEventListener('DOMContentLoaded', function(){
         </div>
         <h3>Reach every member in one click</h3>
         <p class="before"><span class="blab">Before</span> <span class="strike">Export a list, log into MailChimp, rebuild the same email again.</span></p>
-        <p class="now"><span class="blab">Now</span> <span class="nowline">Write once, pick the audience, hit send. Names and QR codes fill in.</span></p>      </article>
+        <p class="now"><span class="blab">Now</span> <span class="nowline">Write once, pick the audience, and send. Each name is filled in for you.</span></p>      </article>
 
-      <!-- Card 2: QR check-in -->
+      <!-- Card 4: QR check-in -->
       <article class="rcard" style="--d:80ms">
         <div class="vg" role="img" aria-labelledby="cap2">
           <p class="sr" id="cap2">A staff phone scans a guest ticket code. A green check appears and A. Horvat is checked in, with the name card confirming it instantly.</p>
@@ -849,7 +928,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <p class="before"><span class="blab">Before</span> <span class="strike">A printed list, a pen, and a line out the door.</span></p>
         <p class="now"><span class="blab">Now</span> <span class="nowline">Scan the QR code. Their name, ticket, and table show up instantly.</span></p>      </article>
 
-      <!-- Card 3: Gala invite links -->
+      <!-- Card 5: Gala invite links -->
       <article class="rcard">
         <div class="vg" role="img" aria-labelledby="cap3">
           <p class="sr" id="cap3">The portal mints an invite link named VIP Table 1. A guest uses it and A. Horvat appears on the gala list with a gold VIP star and a ticket sent by email.</p>
@@ -877,7 +956,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <p class="before"><span class="blab">Before</span> <span class="strike">Juggling guest lists, RSVPs, and who sits at which table.</span></p>
         <p class="now"><span class="blab">Now</span> <span class="nowline">Create a labeled invite link, track who replies, flag VIPs at the door.</span></p>      </article>
 
-      <!-- Card 4: Finances -->
+      <!-- Card 6: Finances -->
       <article class="rcard" style="--d:80ms">
         <div class="vg" role="img" aria-labelledby="cap4">
           <p class="sr" id="cap4">An invoice card in the portal is marked paid. A green PAID stamp lands on it and the status pill turns green, all tracked in one place.</p>
@@ -905,7 +984,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <p class="before"><span class="blab">Before</span> <span class="strike">Excel for the money, a separate tool for invoices, receipts everywhere.</span></p>
         <p class="now"><span class="blab">Now</span> <span class="nowline">Log income and expenses, issue proper Croatian invoices, see where money went.</span></p>      </article>
 
-      <!-- Card 5: Accelerator (static) -->
+      <!-- Card 7: Accelerator (static) -->
       <article class="rcard">
         <div class="vstatic" role="img" aria-labelledby="cap5">
           <p class="sr" id="cap5">Three applications sit in the portal with reviewer scores and gold ranking marks, and interviews run on private links.</p>
@@ -955,7 +1034,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <p class="before"><span class="blab">Before</span> <span class="strike">Forms in one place, documents in another, scores in a spreadsheet.</span></p>
         <p class="now"><span class="blab">Now</span> <span class="nowline">Applicants upload, reviewers score, interviews run on private links, rankings publish. One flow.</span></p>      </article>
 
-      <!-- Card 6: Forum (static) -->
+      <!-- Card 8: Forum (static) -->
       <article class="rcard" style="--d:80ms">
         <div class="vstatic" role="img" aria-labelledby="cap6">
           <p class="sr" id="cap6">A member post is approved and pinned, two members are matched as mentor and mentee, and a gold badge is awarded, all from one screen.</p>
@@ -989,38 +1068,8 @@ document.addEventListener('DOMContentLoaded', function(){
         <p class="before"><span class="blab">Before</span> <span class="strike">Chasing members across group chats to approve, post, and match mentors.</span></p>
         <p class="now"><span class="blab">Now</span> <span class="nowline">Approve members, curate posts, match mentors, and award badges in one place.</span></p>      </article>
 
-      <!-- Card 7: PR calendar -->
+      <!-- Card 9: System health -->
       <article class="rcard">
-        <div class="vg" role="img" aria-labelledby="cap7">
-          <p class="sr" id="cap7">Three draft posts settle onto their planned dates in the portal content calendar. The portal plans, drafts and schedules. You still paste each post to the platform yourself.</p>
-          <div class="vgbar" aria-hidden="true"><span class="vgdots"><i></i><i></i><i></i></span><span class="vglab"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="1.8" stroke-linejoin="round"><path d="M3 10l14-6v16L3 14v-4z"/><path d="M7 15v3a2.5 2.5 0 005 .5"/></svg>PR &amp; Media &#183; Content Calendar</span></div>
-          <div class="vgbody" aria-hidden="true">
-            <span class="v5-tray">Drafts</span>
-            <span class="v5-chip v5-c1"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h3l2-3h6l2 3h3v11H4V8z"/><circle cx="12" cy="13" r="3"/></svg>Post &#183; draft</span>
-            <span class="v5-chip v5-c2"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 3l4 4L8 20l-5 1 1-5L17 3z"/></svg>Article &#183; draft</span>
-            <span class="v5-chip v5-c3"><svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>Newsletter</span>
-            <div class="v5-grid">
-              <span class="v5-wd">M</span><span class="v5-wd">T</span><span class="v5-wd">W</span><span class="v5-wd">T</span><span class="v5-wd">F</span><span class="v5-wd">S</span><span class="v5-wd">S</span>
-              <span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell v5-t1"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span>
-              <span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell v5-t2"></span><span class="v5-cell"></span>
-              <span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span>
-              <span class="v5-cell"></span><span class="v5-cell v5-t3"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span><span class="v5-cell"></span>
-            </div>
-            <span class="v5-pill">3 posts planned</span>
-          </div>
-        </div>
-        <div class="rmeta">
-          <span class="micon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
-          <span class="rtag">Replaces five open tabs</span>
-        </div>
-        <h3>Plan every post on one calendar</h3>
-        <p class="before"><span class="blab">Before</span> <span class="strike">Posts scattered across apps, engagement numbers guessed from memory.</span></p>
-        <p class="now"><span class="blab">Now</span> <span class="nowline">Draft posts, set dates, keep one calendar, and record how each one did.</span></p>
-        <p class="fineprint">It drafts and plans. You still paste the post to Instagram yourself.</p>
-      </article>
-
-      <!-- Card 8: System health -->
-      <article class="rcard" style="--d:80ms">
         <div class="vg short" role="img" aria-labelledby="cap8">
           <p class="sr" id="cap8">One click on Run checks tests the portal end to end. Three status lights turn green one by one and the banner reads All systems go.</p>
           <div class="vgbar" aria-hidden="true"><span class="vgdots"><i></i><i></i><i></i></span><span class="vglab"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C6 16 3 12.5 3 8.8 3 6 5 4 7.5 4c1.8 0 3.4 1 4.5 2.6C13.1 5 14.7 4 16.5 4 19 4 21 6 21 8.8c0 3.7-3 7.2-9 12.2z"/><path d="M5 12h4l1.5-3 2.5 5 1.5-2.5H19"/></svg>System Health</span>
@@ -1179,8 +1228,8 @@ document.addEventListener('DOMContentLoaded', function(){
     {q:"How do I get a login?", keywords:["login","log in","account","access","sign up","signup","register","get in","credential","credentials","username"], a:"There is no self sign-up. Email president@medx.hr and Alen sets you up.", link:{href:"mailto:president@medx.hr?subject=Portal%20access", label:"Email Alen"}},
     {q:"I did not get my login email", keywords:["did not get","didnt get","no email","login email","password email","not arrive","missing email","spam","junk","inbox"], a:"Check your spam or junk folder first. If it is still missing, message the team channel or email president@medx.hr and Alen will resend it."},
     {q:"The page takes forever to load", keywords:["slow","load","loading","forever","takes long","wake","waking","spinning","not loading","stuck loading","blank"], a:"That is normal. After a quiet spell the portal takes about 30 seconds to wake up on the first load. Give it a moment and it opens."},
-    {q:"What can the portal do?", keywords:["what can it do","what does it do","feature","features","everything","capability","overview","what for","use it for"], a:"Five big things: emails and newsletters, QR check-in at the door, gala invite links, invoices and finances, and a social calendar. Each one lives in the left sidebar."},
-    {q:"Does it post to Instagram for me?", keywords:["instagram","post for me","auto post","autopost","publish","social post","posting","facebook post","share post"], a:"No. It drafts and plans your posts and keeps the calendar, but you paste each post to Instagram yourself."},
+    {q:"What can the portal do?", keywords:["what can it do","what does it do","feature","features","everything","capability","overview","what for","use it for"], a:"The big ones: the Content Studio for social posts and newsletters, email to every registrant, QR check-in at the door, gala invite links, and invoices and finances. Each one lives in the left sidebar."},
+    {q:"Does it post to Instagram for me?", keywords:["instagram","post for me","auto post","autopost","publish","social post","posting","facebook post","share post","linkedin"], a:"No. One click writes a caption and copies it for you, then you paste it into Instagram or LinkedIn yourself. The portal does not post to any platform on its own."},
     {q:"Can I break something?", keywords:["break","broke","damage","mess up","ruin","delete everything","wrong click","careful","afraid"], a:"No. Clicking, looking, and searching are always safe. Every action is kept in the audit log, so nothing is a mystery."},
     {q:"Is member data safe?", keywords:["data","safe","privacy","gdpr","secure","member data","personal data","confidential","screenshot","screenshots","private"], a:"Yes, and real member data lives here, so treat it with care. Keep screenshots of it out of public chats."},
     {q:"What are the two roles?", keywords:["role","roles","admin","scanner","permission","permissions","level","levels","helper","two roles"], a:"There are two. Most of the team gets full admin, and event-day helpers get a scanner login just for check-in."},
@@ -1189,13 +1238,15 @@ document.addEventListener('DOMContentLoaded', function(){
     {q:"Phone or laptop?", keywords:["phone","laptop","mobile","computer","device","tablet","desktop","which device","ipad"], a:"Both work. The full portal is fine on a laptop, and the door scanner works best on a phone."},
     {q:"What is Claude Code?", keywords:["claude","claude code","ai","beyond","much more","other tool","assistant","translate","translation"], a:"Claude Code is for everything beyond the portal. It writes, translates, and builds whatever the portal does not.", link:{href:GUIDE, label:"See the Claude Code guide"}},
     {q:"Who do I ask for help?", keywords:["ask","help","support","who do i ask","stuck","question","contact","confused","assistance"], a:"Start right here in this box. After that, the team channel, and then Alen at president@medx.hr."},
-    {q:"How do I email all members?", keywords:["email all","newsletter","mailchimp","email blast","reach members","announcement","send email","mass email","email everyone"], a:"Open Email Blast or Newsletter in the sidebar. Write it once, pick the audience, and hit send. Names and QR codes fill in for you."},
+    {q:"How do I email all members?", keywords:["email all","mailchimp","email blast","reach members","announcement","send email","mass email","email everyone"], a:"Open Email Blast in the sidebar. Write it once, pick the audience, and send. Each person's first name is filled in for you."},
+    {q:"What is the Content Studio?", keywords:["content studio","studio","captions","caption","one click","one-click","social studio","make a post","create post"], a:"It is the PR and Media wing. Write a social caption in one click, plan a content calendar, and keep your posts and newsletters in one place. You still paste each post to the platform yourself."},
+    {q:"How does the newsletter work?", keywords:["newsletter","auto generate","auto-generate","member update","newsletters","generate newsletter"], a:"Open Newsletter and press Auto-Generate. It builds a draft from your upcoming sessions, deadlines and confirmed speakers. Sending it posts the update to members inside the portal and pings their phones. It does not send an email."},
     {q:"How does check-in work?", keywords:["check in","checkin","qr","door","scan","scanner","registration","arrival","arrivals","entry","ticket"], a:"In an event under Registrations and Check-in, scan the QR code on each ticket. The name pops up and the guest is marked in on the spot."},
     {q:"How do gala invite links work?", keywords:["gala","invite","invitation","vip","invite link","personal link","guest link","evening"], a:"In the Gala wing you make a personal invite link for each guest. The portal tracks who is invited and who has replied."},
     {q:"Where are invoices and finances?", keywords:["invoice","invoices","finance","finances","money","payment","budget","receipt","accounting","sponsor payment"], a:"Open Finances in the sidebar. You can see invoices, mark them paid, and follow the totals in one place."},
     {q:"What is the Accelerator wing?", keywords:["accelerator","application","applications","startup","startups","cohort","applicant","applicants"], a:"The Accelerator wing gathers and organises applications so you can review them in one place."},
     {q:"What is the Forum wing?", keywords:["forum","community","members area","discussion","senior wing"], a:"The Forum wing is the members space. You manage its people and content from the sidebar."},
-    {q:"How do I plan social posts?", keywords:["pr","media","content calendar","plan posts","schedule post","posts","social calendar","planning","pr and media"], a:"Open PR and Media in the sidebar. Draft posts, set their dates on one calendar, and note how each did. You still paste each post to the platform yourself."},
+    {q:"How do I plan social posts?", keywords:["pr","media","content calendar","plan posts","schedule post","posts","social calendar","planning","pr and media"], a:"Open the Content Studio, the PR and Media wing. Write a caption in one click, set post dates on one calendar, and note how each did. You still paste each post to the platform yourself."},
     {q:"How do I check the system?", keywords:["system health","health","run checks","test","developer","status","is it working","all systems","something looks off"], a:"Open Health and click Run checks. It tests email, payments, and check-in, then shows green lights when all is well."},
     {q:"What else is inside?", keywords:["sessions","scheduling","speaker","documents","scholarship","scholarships","refund","refunds","volunteer","volunteers","shift","shifts","contacts","audit trail","drawer"], a:"There is more in the drawer: sessions and scheduling, speaker documents, scholarships and refunds, volunteers and shifts, a contacts book, and the audit trail."},
     {q:"How do I get in the first time?", keywords:["first time","get in","step","steps","how to enter","open portal","url","website address","portal link","sign in"], a:"Ask Alen for an account, watch your inbox for your login, then open medx-admin-portal.onrender.com and sign in."},
