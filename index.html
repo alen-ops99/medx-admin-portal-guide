@@ -484,6 +484,8 @@ html.js .gstep{opacity:0;transform:translateY(14px) scale(.94);transition:opacit
 html.js .getin.in .gstep{opacity:1;transform:none}
 html.js .getin.in .gline{transform:scaleX(1);transition:transform .9s var(--ease) .35s}
 html.js .getin.in .gline::after{opacity:1;transition:opacity .2s ease 1.25s}
+.getin a.gstep{text-decoration:none;cursor:pointer;transition:transform .3s ease,box-shadow .3s ease}
+.getin a.gstep:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(21,22,26,.1);border-color:rgba(158,27,34,.35)}
 .getin-cta{margin:0 0 22px}
 .amber{display:flex;gap:11px;align-items:center;background:rgba(248,176,24,.14);border:1px solid rgba(248,176,24,.5);border-radius:14px;padding:14px 17px;font-size:14px;color:#4a3c10;max-width:640px}
 .amber svg{flex:none;color:#8a6a0a;margin-top:2px}
@@ -515,6 +517,8 @@ html.js .getin.in .gline::after{opacity:1;transition:opacity .2s ease 1.25s}
 .btn-ghost{border:1.5px solid rgba(250,250,248,.45);color:var(--off)}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
 #closing .access{font-size:13px;color:rgba(250,250,248,.6);margin-bottom:10px}
+#closing .access a{color:var(--gold);text-decoration:none;font-weight:600}
+#closing .access a:hover{text-decoration:underline}
 #closing .cross{font-size:13.5px;color:rgba(250,250,248,.72);max-width:54ch;margin:0 auto}
 #closing .cross strong{color:#fff;font-weight:600}
 #closing .cross a{color:var(--gold);font-size:13.5px;white-space:nowrap}
@@ -681,7 +685,7 @@ document.addEventListener('DOMContentLoaded', function(){
       <a href="#replaces">What it replaces</a>
       <a href="#get-in">Getting in</a>
       <a href="#faq">FAQ</a>
-      <a class="nav-cta" href="mailto:president@medx.hr?subject=Portal%20access">Get your login</a>
+      <a class="nav-cta" href="https://medx-admin-portal.onrender.com" target="_blank" rel="noopener">Open the portal</a>
     </nav>
     <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mnav" aria-label="Open menu">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#15161A" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
@@ -692,7 +696,7 @@ document.addEventListener('DOMContentLoaded', function(){
   <a href="#replaces">What it replaces</a>
   <a href="#get-in">Getting in</a>
   <a href="#faq">FAQ</a>
-  <a class="nav-cta" href="mailto:president@medx.hr?subject=Portal%20access">Get your login</a>
+  <a class="nav-cta" href="https://medx-admin-portal.onrender.com" target="_blank" rel="noopener">Open the portal</a>
 </nav>
 
 <main id="main">
@@ -713,7 +717,7 @@ document.addEventListener('DOMContentLoaded', function(){
         <span class="chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg>Nothing to install</span>
         <span class="chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg>No tech skills needed</span>
         <span class="chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg>Works on your phone</span>
-        <span class="chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg>Alen sets you up</span>
+        <span class="chip"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 12l5 5 11-11"/></svg>One shared test account</span>
       </div>
       <p class="hr-line reveal" style="--d:460ms">Sve na jednom mjestu, bez ru&#269;nog rada.</p>
     </div>
@@ -898,6 +902,82 @@ document.addEventListener('DOMContentLoaded', function(){
         <h3>Reach every member in one click</h3>
         <p class="before"><span class="blab">Before</span> <span class="strike">Export a list, log into MailChimp, rebuild the same email again.</span></p>
         <p class="now"><span class="blab">Now</span> <span class="nowline">Write once, pick the audience, and send. Each name is filled in for you.</span></p>      </article>
+
+      <!-- Card A: Paid registrations online (static) -->
+      <article class="rcard" style="--d:80ms">
+        <div class="vstatic" role="img" aria-labelledby="capreg">
+          <p class="sr" id="capreg">A registrant pays by card and the portal issues a Croatian fiscal invoice automatically. A payment card on the left flows into an invoice on the right that carries a green fiscal stamp.</p>
+          <div class="vgbar" aria-hidden="true"><span class="vgdots"><i></i><i></i><i></i></span><span class="vglab"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Registrations &#183; Online payment</span></div>
+          <svg class="art" viewBox="0 0 312 158" aria-hidden="true">
+            <rect x="4" y="30" width="120" height="76" rx="10" fill="#1c2436"/>
+            <rect x="4" y="42" width="120" height="12" fill="#334155"/>
+            <rect x="16" y="66" width="24" height="17" rx="4" fill="#c9a962"/>
+            <rect x="16" y="90" width="66" height="5" rx="2.5" fill="#64748b"/>
+            <text x="112" y="96" text-anchor="end" font-family="Inter" font-size="9.5" font-weight="700" fill="#e9eef9">CARD</text>
+            <text x="64" y="24" text-anchor="middle" font-family="Inter" font-size="8.5" font-weight="600" fill="#38bdf8">Card payment</text>
+            <path d="M128 68h34" fill="none" stroke="#334155" stroke-width="1.5"/>
+            <path d="M158 63l6 5-6 5" fill="none" stroke="#334155" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="170" y="8" width="138" height="122" rx="9" fill="#1c2436"/>
+            <rect x="184" y="22" width="60" height="7" rx="3.5" fill="#c9a962"/>
+            <rect x="184" y="38" width="110" height="4" rx="2" fill="#334155"/>
+            <rect x="184" y="48" width="98" height="4" rx="2" fill="#334155"/>
+            <rect x="184" y="58" width="106" height="4" rx="2" fill="#334155"/>
+            <g transform="rotate(-11 248 96)">
+              <rect x="216" y="82" width="64" height="27" rx="5" fill="none" stroke="#22c55e" stroke-width="2"/>
+              <text x="248" y="100" text-anchor="middle" font-family="Inter" font-size="11" font-weight="800" fill="#22c55e" letter-spacing="1.5">FISKAL</text>
+            </g>
+            <text x="156" y="150" text-anchor="middle" font-family="Inter" font-size="8.5" fill="#64748b">Card is charged, a fiscal invoice is issued automatically</text>
+          </svg>
+        </div>
+        <div class="rmeta">
+          <span class="micon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+          <span class="rtag">Replaces bank-transfer chasing and paper forms</span>
+        </div>
+        <h3>Take paid registrations online</h3>
+        <p class="before"><span class="blab">Before</span> <span class="strike">Chase payments by email, type invoices by hand.</span></p>
+        <p class="now"><span class="blab">Now</span> <span class="nowline">Stripe payment plus an automatic Croatian fiscal invoice.</span></p>      </article>
+
+      <!-- Card B: Buzz every member's phone (static) -->
+      <article class="rcard">
+        <div class="vstatic" role="img" aria-labelledby="capbuzz">
+          <p class="sr" id="capbuzz">One announcement in the portal rings every member's phone and lands in the portal feed. A bell on the left sends a signal to three phones that light up with a notification at once.</p>
+          <div class="vgbar" aria-hidden="true"><span class="vgdots"><i></i><i></i><i></i></span><span class="vglab"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#F8B018" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9z"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg>Announcements &#183; Push to phones</span></div>
+          <svg class="art" viewBox="0 0 312 158" aria-hidden="true">
+            <circle cx="58" cy="66" r="36" fill="rgba(248,176,24,.1)"/>
+            <path d="M58 40a13 13 0 00-13 13c0 11-3.5 14-5.5 16h37c-2-2-5.5-5-5.5-16a13 13 0 00-13-13z" fill="none" stroke="#F8B018" stroke-width="2.6" stroke-linejoin="round"/>
+            <path d="M53 71a5 5 0 0010 0" fill="none" stroke="#F8B018" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M58 34v4" stroke="#F8B018" stroke-width="2.6" stroke-linecap="round"/>
+            <path d="M94 50c4.5 7 4.5 21 0 28" fill="none" stroke="rgba(248,176,24,.55)" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M22 50c-4.5 7-4.5 21 0 28" fill="none" stroke="rgba(248,176,24,.55)" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M100 66h20" fill="none" stroke="#334155" stroke-width="1.5"/>
+            <g>
+              <rect x="150" y="34" width="42" height="90" rx="9" fill="#1c2436" stroke="#334155" stroke-width="1.5"/>
+              <rect x="164" y="40" width="14" height="3" rx="1.5" fill="#334155"/>
+              <rect x="158" y="56" width="26" height="30" rx="5" fill="rgba(34,197,94,.15)"/>
+              <circle cx="185" cy="52" r="7.5" fill="#22c55e"/>
+            </g>
+            <g>
+              <rect x="204" y="34" width="42" height="90" rx="9" fill="#1c2436" stroke="#334155" stroke-width="1.5"/>
+              <rect x="218" y="40" width="14" height="3" rx="1.5" fill="#334155"/>
+              <rect x="212" y="56" width="26" height="30" rx="5" fill="rgba(34,197,94,.15)"/>
+              <circle cx="239" cy="52" r="7.5" fill="#22c55e"/>
+            </g>
+            <g>
+              <rect x="258" y="34" width="42" height="90" rx="9" fill="#1c2436" stroke="#334155" stroke-width="1.5"/>
+              <rect x="272" y="40" width="14" height="3" rx="1.5" fill="#334155"/>
+              <rect x="266" y="56" width="26" height="30" rx="5" fill="rgba(34,197,94,.15)"/>
+              <circle cx="293" cy="52" r="7.5" fill="#22c55e"/>
+            </g>
+            <text x="156" y="150" text-anchor="middle" font-family="Inter" font-size="8.5" fill="#64748b">One announcement lights up every phone and the portal feed</text>
+          </svg>
+        </div>
+        <div class="rmeta">
+          <span class="micon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 00-12 0c0 7-3 9-3 9h18s-3-2-3-9z"/><path d="M13.7 21a2 2 0 01-3.4 0"/></svg></span>
+          <span class="rtag">Replaces WhatsApp broadcast chaos</span>
+        </div>
+        <h3>Buzz every member's phone</h3>
+        <p class="before"><span class="blab">Before</span> <span class="strike">Copy the news into five group chats.</span></p>
+        <p class="now"><span class="blab">Now</span> <span class="nowline">One announcement pings phones and the portal feed.</span></p>      </article>
 
       <!-- Card 4: QR check-in -->
       <article class="rcard" style="--d:80ms">
@@ -1118,23 +1198,19 @@ document.addEventListener('DOMContentLoaded', function(){
   <div class="wrap">
     <div class="sect-h">
       <div class="rule"></div>
-      <p class="kicker reveal">Three steps.</p>
-      <h2 class="reveal" style="--d:80ms">How you get in</h2>
+      <p class="kicker reveal">One shared account.</p>
+      <h2 class="reveal" style="--d:80ms">Try it yourself</h2>
     </div>
     <div class="getin reveal">
       <span class="gline" aria-hidden="true"></span>
-      <div class="gstep"><span class="gn">1</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><p>Email Alen for access</p></div>
-      <div class="gstep" style="--d:120ms"><span class="gn">2</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="15" r="4"/><path d="M11 12l9-9M17 6l2 2M14 9l2 2"/></svg></span><p>Your login arrives by email</p></div>
-      <div class="gstep" style="--d:240ms"><span class="gn">3</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h5v18h-5"/><path d="M14 3v18M3 21h11M9 12h.01M3 6l9 1.5v9L3 18V6z"/></svg></span><p>Open the portal and sign in</p></div>
-    </div>
-    <div class="getin-cta reveal">
-      <a class="btn btn-gold" href="mailto:president@medx.hr?subject=Portal%20access">Email Alen for access</a>
+      <div class="gstep"><span class="gn">1</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="7.5" cy="15.5" r="4.5"/><path d="M10.7 12.3L20 3M16.5 6.5l2 2M13.5 9.5l2 2"/></svg></span><p>One shared test account for the whole team</p></div>
+      <div class="gstep" style="--d:120ms"><span class="gn">2</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><p>Login details are in your email</p></div>
+      <a class="gstep" style="--d:240ms" href="https://medx-admin-portal.onrender.com" target="_blank" rel="noopener"><span class="gn">3</span><span class="gi"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h5v18h-5"/><path d="M14 3v18M3 21h11M9 12h.01M3 6l9 1.5v9L3 18V6z"/></svg></span><p>Open the portal and sign in</p></a>
     </div>
     <div class="amber reveal">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
       <span>First load after a quiet spell takes about 30 seconds.</span>
     </div>
-    <p class="roles reveal">Most get <strong>full admin</strong>. Event-day helpers get a <strong>scanner login</strong>.</p>
   </div>
 </section>
 
@@ -1144,18 +1220,17 @@ document.addEventListener('DOMContentLoaded', function(){
     <div class="sect-h">
       <div class="rule"></div>
       <p class="kicker reveal">Permission to explore.</p>
-      <h2 class="reveal" style="--d:80ms">You cannot break it</h2>
+      <h2 class="reveal" style="--d:80ms">You cannot break anything.</h2>
+      <p class="sect-sub reveal" style="--d:140ms">This is a test space. Click everything.</p>
     </div>
     <div class="habits">
-      <div class="habit reveal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3.5v11l2.5-2.5 2 4.5 2-1-2-4.5H17L9 3.5z"/></svg><span>Click anything. Nothing breaks by looking around.</span></div>
-      <div class="habit reveal" style="--d:80ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg><span>Every list has a search box. Type a name, find it.</span></div>
-      <div class="habit reveal" style="--d:160ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11v8H8l-4 3V5z"/><path d="M20 9v10l-3-2h-6"/></svg><span>Stuck? Ask in the team channel and someone will help.</span></div>
+      <div class="habit reveal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3l14 7-6 2-2 6L5 3z"/></svg><span>Click around freely, nothing is fragile</span></div>
+      <div class="habit reveal" style="--d:80ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3.5 6l1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></svg><span>The audit log remembers every action</span></div>
+      <div class="habit reveal" style="--d:160ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.6 9a2.5 2.5 0 014.6 1.3c0 1.7-2.2 2-2.2 3.5"/><path d="M12 17h.01"/></svg><span>Stuck? Ask Alen for help</span></div>
     </div>
-    <p class="minihead reveal">Take care of these</p>
     <div class="care">
-      <div class="care-row reveal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z"/></svg><span>Real member data lives here. Keep screenshots out of public chats.</span></div>
-      <div class="care-row reveal" style="--d:80ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span>Before a bulk email goes out, read it twice. Then send.</span></div>
-      <div class="care-row reveal" style="--d:160ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3.5 6l1 1 2-2M3.5 12l1 1 2-2M3.5 18l1 1 2-2"/></svg><span>The audit log remembers every action, so nothing is ever a mystery.</span></div>
+      <div class="care-row reveal"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v5c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V6l8-3z"/></svg><span>Real member data lives here. Keep it private.</span></div>
+      <div class="care-row reveal" style="--d:80ms"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6.5 10-6.5c1.8 0 3.4.5 4.7 1.2M22 12s-3.5 6.5-10 6.5c-1.8 0-3.4-.5-4.7-1.2"/><path d="M4 4l16 16"/></svg><span>No screenshots into public chats.</span></div>
     </div>
     <div class="faq" id="faq">
       <p class="minihead reveal">Quick answers</p>
@@ -1182,9 +1257,8 @@ document.addEventListener('DOMContentLoaded', function(){
     <p class="line reveal" style="--d:80ms">This is your portal, not the developer's. Come in and click around freely.</p>
     <div class="btn-row reveal" style="--d:240ms">
       <a class="btn btn-gold" href="https://medx-admin-portal.onrender.com" target="_blank" rel="noopener">Open the portal</a>
-      <a class="btn btn-ghost" href="mailto:president@medx.hr?subject=Portal%20access">Ask Alen for access</a>
     </div>
-    <p class="access reveal" style="--d:320ms">No self sign-up. Email president@medx.hr and Alen sets you up.</p>
+    <p class="access reveal" style="--d:320ms">Ask <a href="mailto:president@medx.hr?subject=Portal%20help">Alen</a> if you need any assistance or help.</p>
     <p class="cross reveal" style="--d:400ms"><strong>Want much more than the portal does?</strong> Claude Code writes, translates, and builds anything beyond it. <a href="https://alen-ops99.github.io/medx-claude-code-onboarding/" target="_blank" rel="noopener">See the Claude Code guide</a></p>
   </div>
 </section>
@@ -1225,14 +1299,14 @@ document.addEventListener('DOMContentLoaded', function(){
   var GUIDE = 'https://alen-ops99.github.io/medx-claude-code-onboarding/';
   var kb = [
     {q:"Do I need to be technical?", keywords:["technical","tech","non technical","not technical","skill","skills","hard","difficult","confusing","complicated","beginner","scared"], a:"Not at all. If you can send a WhatsApp message, you can run everything here. The portal was built for non-technical staff."},
-    {q:"How do I get a login?", keywords:["login","log in","account","access","sign up","signup","register","get in","credential","credentials","username"], a:"There is no self sign-up. Email president@medx.hr and Alen sets you up.", link:{href:"mailto:president@medx.hr?subject=Portal%20access", label:"Email Alen"}},
-    {q:"I did not get my login email", keywords:["did not get","didnt get","no email","login email","password email","not arrive","missing email","spam","junk","inbox"], a:"Check your spam or junk folder first. If it is still missing, message the team channel or email president@medx.hr and Alen will resend it."},
+    {q:"How do I get a login?", keywords:["login","log in","account","access","sign up","signup","register","get in","credential","credentials","username","shared"], a:"One shared test account for the whole team. The login details are in the email you received. Open medx-admin-portal.onrender.com and sign in.", link:{href:"https://medx-admin-portal.onrender.com", label:"Open the portal"}},
+    {q:"I cannot find the login details", keywords:["did not get","didnt get","no email","login email","password email","not arrive","missing email","spam","junk","inbox","cannot find","details"], a:"Check your spam or junk folder for the email with the shared login details. If it is still missing, ask Alen and he will resend them.", link:{href:"mailto:president@medx.hr?subject=Portal%20help", label:"Ask Alen"}},
     {q:"The page takes forever to load", keywords:["slow","load","loading","forever","takes long","wake","waking","spinning","not loading","stuck loading","blank"], a:"That is normal. After a quiet spell the portal takes about 30 seconds to wake up on the first load. Give it a moment and it opens."},
     {q:"What can the portal do?", keywords:["what can it do","what does it do","feature","features","everything","capability","overview","what for","use it for"], a:"The big ones: the Content Studio for social posts and newsletters, email to every registrant, QR check-in at the door, gala invite links, and invoices and finances. Each one lives in the left sidebar."},
     {q:"Does it post to Instagram for me?", keywords:["instagram","post for me","auto post","autopost","publish","social post","posting","facebook post","share post","linkedin"], a:"No. One click writes a caption and copies it for you, then you paste it into Instagram or LinkedIn yourself. The portal does not post to any platform on its own."},
     {q:"Can I break something?", keywords:["break","broke","damage","mess up","ruin","delete everything","wrong click","careful","afraid"], a:"No. Clicking, looking, and searching are always safe. Every action is kept in the audit log, so nothing is a mystery."},
     {q:"Is member data safe?", keywords:["data","safe","privacy","gdpr","secure","member data","personal data","confidential","screenshot","screenshots","private"], a:"Yes, and real member data lives here, so treat it with care. Keep screenshots of it out of public chats."},
-    {q:"What are the two roles?", keywords:["role","roles","admin","scanner","permission","permissions","level","levels","helper","two roles"], a:"There are two. Most of the team gets full admin, and event-day helpers get a scanner login just for check-in."},
+    {q:"Do we each have our own account?", keywords:["role","roles","admin","scanner","own account","each","personal","separate login","shared","one account","same login","permission","permissions"], a:"Not for now. The whole team uses one shared test account, and the login details are in the email you received."},
     {q:"I sent a wrong bulk email", keywords:["wrong email","mistake","sent wrong","bulk email","wrong bulk","correction","undo email","recall","error email","oops"], a:"Tell the team channel, then send a short follow-up correction. The audit log shows exactly what went out, so nothing gets lost."},
     {q:"Where do I find things?", keywords:["where","find","location","sidebar","menu","navigate","section","cannot find","which tab","where is"], a:"Everything sits in the left sidebar: Plexus, Gala, Bridges, Accelerator, Forum, Croatians Abroad, Finances, Email, PR and Health."},
     {q:"Phone or laptop?", keywords:["phone","laptop","mobile","computer","device","tablet","desktop","which device","ipad"], a:"Both work. The full portal is fine on a laptop, and the door scanner works best on a phone."},
@@ -1249,7 +1323,7 @@ document.addEventListener('DOMContentLoaded', function(){
     {q:"How do I plan social posts?", keywords:["pr","media","content calendar","plan posts","schedule post","posts","social calendar","planning","pr and media"], a:"Open the Content Studio, the PR and Media wing. Write a caption in one click, set post dates on one calendar, and note how each did. You still paste each post to the platform yourself."},
     {q:"How do I check the system?", keywords:["system health","health","run checks","test","developer","status","is it working","all systems","something looks off"], a:"Open Health and click Run checks. It tests email, payments, and check-in, then shows green lights when all is well."},
     {q:"What else is inside?", keywords:["sessions","scheduling","speaker","documents","scholarship","scholarships","refund","refunds","volunteer","volunteers","shift","shifts","contacts","audit trail","drawer"], a:"There is more in the drawer: sessions and scheduling, speaker documents, scholarships and refunds, volunteers and shifts, a contacts book, and the audit trail."},
-    {q:"How do I get in the first time?", keywords:["first time","get in","step","steps","how to enter","open portal","url","website address","portal link","sign in"], a:"Ask Alen for an account, watch your inbox for your login, then open medx-admin-portal.onrender.com and sign in."},
+    {q:"How do I get in the first time?", keywords:["first time","get in","step","steps","how to enter","open portal","url","website address","portal link","sign in"], a:"Use the shared test account. The login details are in the email you received, then open medx-admin-portal.onrender.com and sign in.", link:{href:"https://medx-admin-portal.onrender.com", label:"Open the portal"}},
     {q:"Any tips before sending?", keywords:["tips","before send","read twice","proofread","double check","careful email"], a:"Before a bulk email goes out, read it twice, then send. And keep member screenshots out of public chats."}
   ];
   var quickChips = [0,1,4,5,6,3];
